@@ -25,8 +25,8 @@ android {
         applicationId = "com.akbaralfattah.koesnadiai.koesnadi_ai_coding_challenge"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
+        minSdk = 21
+        targetSdk = 29
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
