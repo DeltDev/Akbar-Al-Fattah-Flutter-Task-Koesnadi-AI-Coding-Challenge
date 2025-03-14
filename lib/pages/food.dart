@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:koesnadi_ai_coding_challenge/service/database.dart';
+import 'package:random_string/random_string.dart';
 
 class Food extends StatefulWidget{
   const Food ({super.key});
@@ -7,6 +10,8 @@ class Food extends StatefulWidget{
 }
 
 class FoodState extends State<Food>{
+  TextEditingController foodnamecontroller = new TextEditingController();
+  TextEditingController pricecontroller = new TextEditingController();
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -45,6 +50,7 @@ class FoodState extends State<Food>{
                 borderRadius: BorderRadius.circular(10)
               ),
               child: TextField(
+                controller: foodnamecontroller,
                 decoration: InputDecoration(border: InputBorder.none),
               ),
             ),
@@ -60,13 +66,32 @@ class FoodState extends State<Food>{
                   borderRadius: BorderRadius.circular(10)
               ),
               child: TextField(
+                controller: pricecontroller,
                 decoration: InputDecoration(border: InputBorder.none),
               ),
             ),
             SizedBox(height: 30.0,),
             Center(
                 child: ElevatedButton(
-                    onPressed: (){},
+                    onPressed: ()async{
+                      String Id = randomAlphaNumeric(12);
+                      Map<String, dynamic> foodInfoMap={
+                        "ID":Id,
+                        "FoodName": foodnamecontroller.text,
+                        "Price":pricecontroller.text
+                      };
+                      await DatabaseMethods().addFoodDetails(foodInfoMap, Id).then((value){
+                        Fluttertoast.showToast(
+                            msg: "Food Details has been uploaded succesfully",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.CENTER,
+                            timeInSecForIosWeb: 1,
+                            backgroundColor: Colors.red,
+                            textColor: Colors.white,
+                            fontSize: 16.0
+                        );
+                      });
+                    },
                     child: Text(
                         "Tambahkan makanan",
                         style: TextStyle(

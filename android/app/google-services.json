@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "171041069430",
-    "project_id": "koesnadi-ai-firebase-challenge",
-    "storage_bucket": "koesnadi-ai-firebase-challenge.firebasestorage.app"
+    "project_number": "588782719690",
+    "project_id": "koesnadi-ai-coding-challenge",
+    "storage_bucket": "koesnadi-ai-coding-challenge.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:171041069430:android:b4a4dbd26e26f013648257",
+        "mobilesdk_app_id": "1:588782719690:android:0a0af086662cfa2c3ada33",
         "android_client_info": {
           "package_name": "com.akbaralfattah.koesnadiai.koesnadi_ai_coding_challenge"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDJ3CaxuBj4yYveQ5z5W60g8UsIkUFSdG0"
+          "current_key": "AIzaSyAaQ_4u7q6hXWWlYtTvC2ZSLjAHWcaouLw"
         }
       ],
       "services": {

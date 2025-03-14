@@ -9,7 +9,7 @@ plugins {
 android {
     namespace = "com.akbaralfattah.koesnadiai.koesnadi_ai_coding_challenge"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -47,7 +47,7 @@ flutter {
 dependencies {
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
-
+    implementation("com.google.firebase:firebase-analytics")
 
     // TODO: Add the dependencies for Firebase products you want to use
     // When using the BoM, don't specify versions in Firebase dependencies
